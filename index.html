@@ -1,1 +1,67 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#79b94c">
+  <meta name="description" content="Nosso mundo voxel: explore, colete recursos e dirija seu próprio carro!">
+  <title>Nosso Minecraft — Mundo 01</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="game">
+    <div id="loading">
+      <div class="loading-logo">🌳</div>
+      <h1>Nosso Mundo</h1>
+      <p>Preparando a aventura...</p>
+    </div>
+
+    <div id="hud">
+      <div class="topbar">
+        <div class="brand">🌍 Nosso Mundo</div>
+        <div class="inventory">
+          <span>🪵</span>
+          <span id="wood-count">0</span>
+        </div>
+      </div>
+
+      <div id="message" class="message">Explore a floresta!</div>
+
+      <div class="bottom-ui">
+        <div class="movement">
+          <button class="control up" data-control="forward" aria-label="Frente">▲</button>
+          <div class="movement-row">
+            <button class="control" data-control="left" aria-label="Esquerda">◀</button>
+            <button class="control" data-control="back" aria-label="Trás">▼</button>
+            <button class="control" data-control="right" aria-label="Direita">▶</button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="action-button" class="action-button">🪵 Coletar</button>
+          <button id="jump-button" class="jump-button">⬆ Pular</button>
+        </div>
+      </div>
+
+      <div id="vehicle-panel" class="vehicle-panel">
+        <div class="vehicle-title">🚗 Dirigindo</div>
+        <div class="vehicle-controls">
+          <button class="control vehicle-control" data-control="left">◀</button>
+          <button class="control vehicle-control" data-control="forward">▲</button>
+          <button class="control vehicle-control" data-control="back">▼</button>
+          <button class="control vehicle-control" data-control="right">▶</button>
+        </div>
+        <button id="exit-car" class="exit-button">Sair do carro</button>
+      </div>
+
+      <div class="help">
+        PC: WASD / setas · E: interagir · Espaço: pular
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
+
